@@ -5,9 +5,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the n1-19 branch
   push:
-    branches: [ n1-19 ]
+    branches: [ v19.3.1-N1 ]
   pull_request:
-    branches: [ n1-19 ]
+    branches: [ v19.3.1-N1 ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -43,3 +43,10 @@ jobs:
       - name: Run build
         run: ./mkn1
       
+      - name: Upload ARTIFACT
+        uses: actions/upload-artifact@v3
+        with:
+          name: CoreELEC-19.3.1
+          path: |
+            target/*Phicomm_N1.img*
+          retention-days: 5
