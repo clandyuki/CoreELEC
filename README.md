@@ -5,6 +5,13 @@
 4. Added BD-J menu patch from vpeter: https://discourse.coreelec.org/t/java-for-bd-j-menus/554
 5. Show subtitles by default.
 
+# v19.3.1-N1:
+1. Base on Tag#v19.3-N1.
+2. Fix Python error(mainly in `Embuary Helper` exceptions).
+3. Fix multiple deps pkg url incorrect issue(mostly not found).
+4. If you want to use it, please run build workflows yourself. 
+5. NOTE: directly write img to flash disk will NOT boot, you should boot with 19.3 then replace `System` file in `flash` directory with 19.3.1's then reboot.
+
 # Upgrade
 Put the update package(CoreELEC-Amlogic-ng.arm-xxx.tar) in /storage/.update/, then reboot.
 
